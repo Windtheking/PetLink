@@ -1,142 +1,56 @@
-# <p align = center>Ecomerce-Riwi-Sportsline-API</p>
+# 🌐 Project Web Interface — *HTML | CSS | JavaScript*
 
+Welcome to this web project.  
+This repository contains a simple, lightweight, and fully functional structure to begin developing modern interfaces using essential front-end technologies.
 
-## Index
-- [Gitflow](#git-flow)
-- [sintax de commits](#commit-sintax)
-   - [Header](#header)
-   - [Body](#body)
-   - [Footer](#footer)
-- [Important](#important)
-- [Tips](#tips)
+---
 
-# Ecomerce-Riwi-Sportsline-API
-backend repository for advanced route project
+## Tools Used
 
-## Git flow
-To push content into this repository, you need to follow the next flow:
-1. Clone the repository.
-2. Set on the develop branch with
-```
-git checkout develop
-```
-2. Create a feature branch with 
+This project is built with the fundamental technologies of web development:
 
-```
-git switch -c <corresponding_name>/<feature_name>.
-```
-the corresponding_name field is the same as the tipe of commit, look for [types](#type) of commit for more information
+### **HTML5**
+- Clear semantic structure  
+- Updated tags  
+- Base for site interaction
 
-3. Pull latest changes from the branch you are working in.
-4. Stage changes with 
-```
-git add (selected files)
-```
-5. Commit with a clear and descriptive message following the given description in this README.
-6. Push changes to your current feature branch.
-7. Check branch status with git status.
-8. If it appears the following message:
-<img src = "https://i.sstatic.net/Ggctq.png">
-where branch main is the branch you created. There is nothing to commit.
-<br>
-<br>
-If something looking like this appears instead
-<img src = "https://www.junosnotes.com/wp-content/uploads/2021/07/Adding-deleted-and-modified-files-only-git-add-deleted-files.png">
-It means that files are not being tracked.<br>
-<b>Repeat from step 4</b>
-<br>
-<b>Note:</b> Please know that untracked files will not have the same name as the examples, and the branches won't either
-<br>
-<div align=right>
+### **CSS3**
+- Custom styles  
+- Responsive design  
+- Smooth transitions and basic animations
 
-  [Back to top](#index)
-</div>
+### **JavaScript**
+- Dynamic events  
 
-## Commit sintax 
+---
 
-### Header
-to commit changes into the project, you must create a telling (descriptive) commit, about the changes made following the next estructure</br>
+## How to Access the Project
 
-<div align = center>
+Follow these steps to run the project correctly on your device:
 
-_____
-< type > ( < scope > ): < description >
-______
-</div>
+### 1. Download the Project
+- Download the compressed (.zip) file from the repository or original source.
 
-#### type 
-is the change made to the project, it divides in 
+### 2. Extract the Files
+- Unzip the content into a folder of your choice.
 
-<div align = center>
-<br>
-<br>
+### 3. Open the Project in Visual Studio Code
+- Open **VS Code** → Go to **File** → **Open Folder** → Select the extracted folder.
 
-| *Type*     | *Meaning*                                                                 |
-|--------------|-----------------------------------------------------------------------------|
-| feat       | Adds a *new feature*.                                                     |
-| fix        | Fixes a *bug*.                                                            |
-| docs       | Changes to documentation only.                                              |
-| style      | Edition in code sintax, not logic (semicolon(;), whitespaces (' '))         |
-| refactor   | Code updates without changing behavior.                                     |
-| test       | Adding or modifying tests.                                                  |
+### 4. Install / Enable Required Extensions
+Make sure you have these extensions active:
+
+- **Live Server** – To run the project on a local server.  
+- **Live Preview** – To view changes in real time inside VS Code.
+
+### 5. Check Port Availability
+- Ensure that the default Live Server port (usually **5500**) is available.  
+- If not, Live Server will switch automatically or you can set it manually.
+
+### Final Step
+- Right-click the **index.html** file → **Open with Live Server**.  
+- Your project should now be running in your browser.
 
 <br>
-scope is the place where the change was made, in the (scope) part you must write down the specific file where the change appears, following the example
-
-____
-` feat(dto): ` 
 <br>
-<br>
-` docs(controllers): `
-____
-</div>
-
-<div align = "center", background>
-description is a summarised description of what is in the commit, no capital letters unless is a noun, no period (.)  at the end and always in third person. Normaly you would make 1, maximum, 2 sentences long unless you want to make a long description but that is outside the head of the commit.
-<br>
-<br>
-
-___
-feat(user): create profile page
-
-docs(readme): update installation steps
-___
-</div>
-<div align=right>
-
-  [Back to top](#index)
-</div>
-
-### Optional aditions to commit
-### body
-this section of the commit is designed to give a detiled explenation on the reazon why was the commit made in the very first place, you can give a little explanation on what was made but do not specifie, just give what it's needed to understand the reason of the commit
-<div align=right>
-
-  [Back to top](#index)
-</div>
-
-### footer
-normaly this sections shows the issue that was given in the very first place and the authors of the commit
-<div align=right>
-
-  [Back to top](#index)
-</div>
-
-> #### *IMPORTANT:*
-> - Always pull before pushing to avoid overwriting coders' work.
-> - When merging into develop, open a Pull Request with a clear description of your changes.  
-> - **NEVER** use --force, as it may overwrite other developers' work.
-> - Every Pull Request must have approval from at least 1 coders before merging (authorized coder only). 
-<div align=right>
-
-  [Back to top](#index)
-</div>
-
-
-#### *TIPS*
-- Use camelCase or snake_case for branch names for consistency.
-- Keep branch names short, descriptive, and lowercase for readability.
-<div align=right>
-
-  [Back to top](#index)
-</div>
+<h1> Petlink — for the future of your pet...🐕‍🦺
