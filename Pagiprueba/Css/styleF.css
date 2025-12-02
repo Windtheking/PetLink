@@ -72,7 +72,7 @@ button{
 
 
 .left-side {
-    background-image: url('/Imagenes/store.jpeg');
+    background-image: url('../Imagenes/store.jpeg');
     background-size: 120%;
     background-position-x: -140px;
 }
@@ -99,7 +99,7 @@ button{
 .right-side {
     background-size: 125%;
 
-    background-image: url('/Imagenes/link.jpeg');
+    background-image: url('../Imagenes/link.jpeg');
 }
 
 
