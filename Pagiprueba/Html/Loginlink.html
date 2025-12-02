@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMatch | Encuentra la pareja ideal para tu mascota</title>
+    <link rel="shortcut icon" href="/Imagenes/ICONOO.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Css/stylepetlink.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="/Imagenes/ICONOO.png" alt="PetStore Logo"> 
+            <span class="logo-text">PetMatch</span>
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Buscar raza, especie o ubicación...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="user-actions">
+            <a href="#" class="btn-primary-small">
+                <i class="fas fa-plus-circle"></i> Añadir mascota
+            </a>
+            
+            <div class="user-dropdown">
+                <i class="fas fa-user user-icon"></i>
+                <div class="user-greeting">
+                    ¡Bienvenido! <br>
+                    <span>**Andrés**</span> 
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#"> Mi Perfil</a></li>
+                    <li><a href="#"> Mensajes</a></li>
+                    <li><a href="#"> Mis Mascotas</a></li>
+                    <li><a href="#"> Cerrar Sesión</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            
+            <li class="nav-item dropdown">
+                <a href="#">Perros <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Razas Grandes</a></li>
+                    <li><a href="#">Razas Pequeñas</a></li>
+                    <li><a href="#">Cruce Específico</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#">Gatos <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Pelo Largo</a></li>
+                    <li><a href="#">Pelo Corto</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="#">Otras Especies</a></li>
+            <li class="nav-item"><a href="#" class="nav-offer">Favoritos ❤️</a></li>
+        </ul>
+        
+        <a href="#" class="help-link">¿Cómo funciona?</a>
+    </nav>
+    
+    <main class="container">
+        <section class="hero-banner">
+            <div class="banner-content">
+                <h1>¡Hola, Andrés! Encuentra la pareja perfecta hoy.</h1>
+                <p>Publica a tu mascota o explora perfiles en tu ciudad. ¡Amor a primera vista peluda!</p>
+                <a href="#" class="btn-primary">Empezar Búsqueda</a>
+            </div>
+        </section>
+        
+        <section class="search-filter-section">
+            <h2 class="section-title">Encuentra tu Match</h2>
+            
+            <div class="filter-results-layout">
+                <aside class="filter-sidebar">
+                    <h3>Filtros Rápidos</h3>
+                    <div class="filter-group">
+                        <label for="species">Especie:</label>
+                        <select id="species">
+                            <option>Perro</option>
+                            <option>Gato</option>
+                            <option>Pájaro</option>
+                            <option>Roedor</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="gender">Género Buscado:</label>
+                        <select id="gender">
+                            <option>Hembra</option>
+                            <option>Macho</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="location">Ubicación:</label>
+                        <input type="text" id="location" placeholder="Ciudad, Barrio">
+                    </div>
+                    <button class="btn-secondary-filter">Aplicar Filtros</button>
+                </aside>
+                
+                <div class="match-results-grid">
+                    <div class="profile-card">
+                        <img src="/img/pet_match1.jpg" alt="Perfil de Golden Retriever" class="profile-img">
+                        <span class="status-badge status-available">Disponible</span>
+                        <div class="profile-info">
+                            <h3>Max (Golden Retriever)</h3>
+                            <p class="match-detail"><i class="fas fa-venus-mars"></i> **Género:** Macho</p>
+                            <p class="match-detail"><i class="fas fa-calendar-alt"></i> **Edad:** 2 años</p>
+                            <p class="match-detail"><i class="fas fa-map-marker-alt"></i> **Ubicación:** Bogotá</p>
+                            <a href="#" class="btn-view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/img/pet_match2.jpg" alt="Perfil de Gato Persa" class="profile-img">
+                        <span class="status-badge status-NODIS">NO Disponible</span>
+                        <div class="profile-info">
+                            <h3>Luna (Gato Persa)</h3>
+                            <p class="match-detail"><i class="fas fa-venus-mars"></i> **Género:** Hembra</p>
+                            <p class="match-detail"><i class="fas fa-calendar-alt"></i> **Edad:** 1.5 años</p>
+                            <p class="match-detail"><i class="fas fa-map-marker-alt"></i> **Ubicación:** Medellín</p>
+                            <a href="#" class="btn-view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="/img/pet_match3.jpg" alt="Perfil de Loro" class="profile-img">
+                        <span class="status-badge status-available">Disponible</span>
+                        <div class="profile-info">
+                            <h3>Roco (Loro Amazónico)</h3>
+                            <p class="match-detail"><i class="fas fa-venus-mars"></i> **Género:** Macho</p>
+                            <p class="match-detail"><i class="fas fa-calendar-alt"></i> **Edad:** 5 años</p>
+                            <p class="match-detail"><i class="fas fa-map-marker-alt"></i> **Ubicación:** Cali</p>
+                            <a href="#" class="btn-view-profile">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>PetMatch</h3>
+                <p>La plataforma #1 para conectar dueños y encontrar la pareja ideal para un apareamiento responsable.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <ul>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Reportar Perfil</a></li>
+                    <li><a href="#">Consejos de Apareamiento</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Mi Cuenta</h3>
+                <ul>
+                    <li><a href="#">Mis Anuncios</a></li>
+                    <li><a href="#">Mensajes</a></li>
+                    <li><a href="#">Historial de Matches</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 PetMatch S.A.S. | Hecho con 💖 para los animales.
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script> 
+</body>
+</html>
