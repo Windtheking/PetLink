@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store - Animación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleF.css') }}"> 
+    
+</head>
+<body>
+    <div class="container">
+
+        <header id="main-header"><h1 class="main-heading">pet <br> <img src="{{ url_for('static', filename='Imagenes/ICONOO.png') }}" alt=""></h1></header>
+
+        <div class="half left-side" id="left-panel">
+            <div class="content-wrapper">
+                <a href="{{ url_for('home4') }}"><button class="section-label" id="store-button">store</button></a>
+                <div class="placeholder-image store-image"></div>
+            </div>
+        </div>
+
+        <div class="half right-side" id="right-panel">
+             <div class="content-wrapper">
+                <a href="{{ url_for('home3') }}"><button class="section-label" id="link-button">link</button></a> <div class="placeholder-image link-image"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='Javascript/scrip.js') }}"></script> 
+</body>
+</html>
