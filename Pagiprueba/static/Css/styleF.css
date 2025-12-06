@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    color: #13691f;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    transition: transform 1.5s ease-in-out;
+}
+
+header img {
+    height: 80px;
+    width: auto;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Botones */
+button {
+    font-size: 2rem;
+    color: #13691f;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+/* Secciones izquierda y derecha */
+.half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 1.5s ease;
+}
+
+/* Etiquetas de botones */
+.section-label {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+/* Panel izquierdo */
+.left-side {
+    background-image: url('/static/Imagenes/store.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.left-side:hover {
+    transform: translateX(100px) scale(1.5);
+    transition-delay: 0.5s;
+    width: 60%;
+}
+
+.left-side:hover .section-label {
+    transform: translateX(100px);
+    margin-bottom: 200px;
+}
+
+/* Panel derecho */
+.right-side {
+    background-image: url('/static/Imagenes/link.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right-side:hover {
+    transform: translateX(-100px) scale(1.5);
+    transition-delay: 0.5s;
+    width: 60%;
+}
+
+.right-side:hover .section-label {
+    transform: translateX(-100px);
+    margin-bottom: 200px;
+}
