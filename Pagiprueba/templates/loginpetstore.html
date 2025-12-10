@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStore | Tu tienda de mascotas</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Imagenes/favicon.png') }}" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/stylepetsoree.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='Imagenes/ICONOO.png') }}" alt="PetStore Logo">
+        <span class="logo-text">PetStore</span>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar productos, marcas o animales...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="user-actions">
+        <div class="user-dropdown">
+            <img src="{{ url_for('static', filename='Imagenes/usu.png') }}" alt="Usuario">
+            <div class="user-greeting">
+                ¡Bienvenido! <br>
+                <span>Andrés</span> 
+            </div>
+            <ul class="dropdown-menu">
+                <li><a href="#"> Mi Cuenta</a></li>
+                <li><a href="#"> Mis Pedidos</a></li>
+                <li><a href="#"> Lista de Deseos</a></li>
+                <li><a href="#"> Cerrar Sesión</a></li>
+            </ul>
+        </div>
+        
+        <a href="#" class="cart-link">
+            <img src="{{ url_for('static', filename='Imagenes/carrito-de-compras.png') }}" alt="Carrito">
+            <span class="cart-count">2</span>
+        </a>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li class="nav-item dropdown">
+            <a href="#">Animales <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu large-dropdown">
+                <li><a href="#">Perros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Peces</a></li>
+                <li><a href="#">Aves</a></li>
+                <li><a href="#">Roedores</a></li>
+                <li><a href="#">Reptiles</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a href="#">Perros <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Alimentos</a></li>
+                <li><a href="#">Juguetes</a></li>
+                <li><a href="#">Accesorios y Ropa</a></li>
+                <li><a href="#">Salud y Farmacia</a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a href="#">Gatos <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Alimentos</a></li>
+                <li><a href="#">Rascadores</a></li>
+                <li><a href="#">Cajas de Arena</a></li>
+                <li><a href="#">Salud y Farmacia</a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item"><a href="#" class="nav-offer">¡Ofertas! 🔥</a></li>
+        <li class="nav-item"><a href="#">Marcas</a></li>
+    </ul>
+    
+    <a href="#" class="vet-link">Servicios Veterinarios 🧑‍⚕️</a>
+</nav>
+
+<main class="container">
+    <section class="hero-banner">
+        <div class="banner-content">
+            <h1>¡Hola, Andrés! Mira tus recomendaciones de hoy.</h1>
+            <p>Ahorra hasta 40% de descuento en alimentos seleccionados para tu mascota.</p>
+            <a href="#" class="btn-primary">Ver Mis Recomendaciones</a>
+        </div>
+    </section>
+    
+    <section class="category-grid">
+        <h2 class="section-title">Explora todo por animal</h2>
+        <div class="categories-list">
+            <a href="#" class="category-card">
+                <img src="{{ url_for('static', filename='Imagenes/Plantilla-Blog-1733-x-1155-px-13.jpg') }}" alt="Icono de Perro">
+                <span>Perros</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="{{ url_for('static', filename='Imagenes/imagn.jfif') }}" alt="Icono de Gato">
+                <span>Gatos</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="{{ url_for('static', filename='Imagenes/images.jfif') }}" alt="Icono de Pez">
+                <span>Peces</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="{{ url_for('static', filename='Imagenes/azul.avif') }}" alt="Icono de Pájaro">
+                <span>Aves</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2 class="section-title">Productos que te podrían interesar</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='Imagenes/concen.jfif') }}" alt="Bulto de concentrado" class="product-img">
+                <h3>Concentrado Super Premium 10Kg</h3>
+                <p class="product-brand">Marca X</p>
+                <div class="price-container">
+                    <span class="old-price">$120.000</span>
+                    <span class="current-price">$102.000</span>
+                </div>
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='Imagenes/rasca.jfif') }}" alt="Rascador para gatos" class="product-img">
+                <h3>Rascador Torre de Lujo</h3>
+                <p class="product-brand">PetHome</p>
+                <div class="price-container">
+                    <span class="current-price">$85.000</span>
+                </div>
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='Imagenes/pelo.jfif') }}" alt="Juguete interactivo" class="product-img">
+                <h3>Pelota Interactiva con Sonido</h3>
+                <p class="product-brand">FunPet</p>
+                <div class="price-container">
+                    <span class="current-price">$25.900</span>
+                </div>
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='Imagenes/suple.jpg') }}" alt="Vitaminas" class="product-img">
+                <h3>Suplemento Vitamínico Canino</h3>
+                <p class="product-brand">VetCare</p>
+                <div class="price-container">
+                    <span class="current-price">$58.000</span>
+                </div>
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-content container">
+        <div class="footer-section">
+            <h3>PetStore</h3>
+            <p>Comprometidos con el bienestar de tu mejor amigo. Encuentra todo para tu mascota en un solo lugar.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Ayuda</h3>
+            <ul>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Política de Devolución</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Mi Cuenta</h3>
+            <ul>
+                <li><a href="#">Mi Perfil</a></li>
+                <li><a href="#">Mis Pedidos</a></li>
+                <li><a href="#">Mi Carrito</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h3>Síguenos</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 PetStore | Todos los derechos reservados.
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='Javascript/script.js') }}"></script>
+
+</body>
+</html>
