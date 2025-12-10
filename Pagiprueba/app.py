@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 from supabase import create_client
 from dotenv import load_dotenv
+
 import os
 
 # Inicializar Flask
@@ -15,11 +16,11 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 # Verificación en consola
 print("SUPABASE_URL:", SUPABASE_URL)
-print("SUPABASE_KEY cargada:", "✅ Sí" if SUPABASE_KEY else "❌ No")
+print("SUPABASE_KEY cargada:", " Sí" if SUPABASE_KEY else "No")
 
 # Crear cliente Supabase (CONEXIÓN)
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
-print("✅ Cliente Supabase creado correctamente")
+print("Cliente Supabase creado correctamente")
 
 
 # ---------- RUTAS ----------
@@ -39,15 +40,37 @@ def home2():
 def home3():
     return render_template('petlink.html')
 
-@app.route("/petstores")
+@app.route("/petstore")
 def home4():
-    return render_template('petstores.html')
+    return render_template('petstore.html')
 
-# ---------- RUTA DE PRUEBA ----------
-@app.route("/test")
+@app.route("/test", methods=["GET", "POST"])
 def test():
-    data = supabase.table("roles").select("*").execute()
-    return data.data  # Solo prueba de conexión
 
+    # Mostrar el formulario HTML
+    if request.method == "GET":
+        return render_template("test.html")
+
+    # Recibir datos del HTML por POST
+    if request.method == "POST":
+        data = request.get_json()
+        name = data.get("name")
+
+        if not name:
+            return jsonify({"error": "El nombre no puede estar vacío"}), 400
+
+        try:
+            # --- INSERT EN SUPABASE ---
+            result = supabase.table("roles").insert({"name": name}).execute()
+
+            return jsonify({
+                "status": "ok",
+                "mensaje": "Dato insertado correctamente",
+                "data": result.data
+            })
+
+        except Exception as e:
+            print("ERROR INSERT:", e)
+            return jsonify({"error": str(e)}), 500
 if __name__ == '__main__':
     app.run(debug=True)

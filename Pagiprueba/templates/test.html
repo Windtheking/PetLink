@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Rol</title>
+</head>
+<body>
+
+    <label for="name">Nombre del rol:</label>
+    <input type="text" id="name">
+
+    <button onclick="enviar()">Guardar</button>
+
+<script>
+function enviar() {
+    const data = {
+        name: document.getElementById("name").value
+    };
+
+    fetch("/test", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+    })
+    .then(res => res.text())
+    .then(data => console.log(data));
+}
+</script>
+
+</body>
+</html>
