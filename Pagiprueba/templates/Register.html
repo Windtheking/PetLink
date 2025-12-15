@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/Css/register.css">
+    <title>Document</title>
+    
+</head>
+
+<body id="theMainThing" class="d-flex">
+    <form id="FormSubmission" action="/RegisterMiddlestep" class="align-self-center translate-bottom row g-3 needs-validation d-flex flex-column w-100 " style="margin: 1vh;" method="post" novalidate>
+        <div class="align-self-center col-md-4 d-flex flex-column w-50">
+            <label for="validationCustom01" class="align-self-center form-label"><h3>Username</h3></label>
+            <input type="text" name="username" class="align-self-center form-control" id="" required>
+
+        </div>
+        <div class="align-self-center col-md-4 d-flex flex-column w-50">
+            <label for="validationCustom02" class="align-self-center form-label"><h3>Password</h3></label>
+            <input type="password" name="password" class="align-self-center form-control" id="" required>
+
+        </div>
+        <div class="align-self-center col-md-4 d-flex flex-column w-50">
+            <label for="validationCustomUsername" class="align-self-center form-label"><h3>Email</h3></label>
+            <input type="text" name="email" class="align-self-center form-control"  required>
+        </div>
+        
+        <div class="align-self-center col-12 d-flex flex-column w-50">
+            <button  class="btn btn-primary" type="submit"  onclick="">Submit form</button>
+        </div>
+    </form>
+
+</body>
+<!-- <script src="../static/Javascript/RegisterScript.js"></script> -->
+
+</html>
