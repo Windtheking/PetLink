@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template, request, jsonify
 from Controllers.UsserRegisterController import MiddlewareRegistrationValidation
+from Controllers.UsserLoginController import Usserlogin
 
 pages = Blueprint("pages",__name__)
 
@@ -23,6 +24,16 @@ def home3():
 @pages.route("/petstore")
 def home4():
     return render_template('NotLogedIn/petstores.html')
+
+@pages.route("/Login")
+def MainLoginRedirection():
+    return render_template('Login.html')
+
+@pages.route("/Login/Middlestep", methods = ["GET", "POST"])
+def MiddlewareLoginValidation():
+    Usserlogin()
+    return render_template("LogedIn/Loginlink.html")
+
 
 @pages.route("/Register")
 def MainRegisterRedirection():

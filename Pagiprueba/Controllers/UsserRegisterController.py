@@ -6,10 +6,10 @@ def MiddlewareRegistrationValidation():
     password = request.form.get("password")
     email = request.form.get("email")
 
-    print("FORM DATA:", request.form)
-    print("USERNAME:", request.form.get("username"))
-    print("PASSWORD:", request.form.get("password"))
-    print("EMAIL:", request.form.get("email"))
+    # print("FORM DATA:", request.form)
+    # print("USERNAME:", request.form.get("username"))
+    # print("PASSWORD:", request.form.get("password"))
+    # print("EMAIL:", request.form.get("email"))
 
     
 
